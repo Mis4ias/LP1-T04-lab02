@@ -18,6 +18,27 @@ void concat(vector<int> &vtr1,vector<int> &vtr2, vector<int> &vtr3){
 
 
 }
+bool split(vector<int> &vtr1,vector<int> &vtr2, vector<int> &vtr3,unsigned int indice){
+	vector<int> vtr4;
+	for (unsigned int i = 0; i <= indice; ++i){
+		vtr2.push_back(vtr1[i]);
+	}
+
+	for (unsigned int i = indice+1; i < vtr1.size(); ++i){
+		vtr3.push_back(vtr1[i]);
+	}
+
+	concat(vtr2,vtr3,vtr4);
+	
+	for (unsigned int i = 0; i < vtr4.size(); ++i){
+		if(vtr1[i]==vtr4[i]){}
+		if(vtr1[i]!=vtr4[i]){
+			return false;
+		}
+	}
+	return true;
+}
+
 int main(){
 	vector<int> vtr1;	
 	vector<int> vtr2;
