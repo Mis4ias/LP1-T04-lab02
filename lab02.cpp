@@ -38,6 +38,14 @@ bool split(vector<int> &vtr1,vector<int> &vtr2, vector<int> &vtr3,unsigned int i
 	}
 	return true;
 }
+void merge(vector<int> &vtr1,vector<int> &vtr2, vector<int> &vtr3){
+	
+	for (unsigned int i = 0; i <=vtr1.size()||i <=vtr2.size() ; ++i){
+		vtr3.push_back(vtr1[i]);		
+		vtr3.push_back(vtr2[i+1]);
+		}
+}
+
 
 int main(){
 	vector<int> vtr1;	
