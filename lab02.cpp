@@ -46,6 +46,23 @@ void merge(vector<int> &vtr1,vector<int> &vtr2, vector<int> &vtr3){
 		}
 }
 
+bool partition(vector<int> &vtr1,vector<int> &vtr2, vector<int> &vtr3,unsigned int chave){
+
+	for (unsigned int i = 0; i <vtr1.size() ; ++i){
+		if(vtr1[i]>chave){
+			vtr3.push_back(vtr1[i]);
+		}
+		if(vtr1[i]<chave){
+			vtr2.push_back(vtr1[i]);
+		}else{}
+	}
+	if(vtr1.size()==(vtr2.size()+vtr3.size())){
+		return true;
+	}else{
+		return false;
+	}
+
+}
 
 int main(){
 	vector<int> vtr1;	
