@@ -37,6 +37,19 @@ int main (int argc, char * argv[]) {
 
     assert(vtr9 == vtr10);
 
+    cout << "Testando partition.." << endl;
+
+    vector<int> vtr11 = {5,9,7,2,1,11,36,59,62};
+    vector<int> vtr12 = {5,9,7,2,1};
+    vector<int> vtr13 = {11,36,59,62};
+    vector<int> vtr14;
+    vector<int> vtr15;
+    int chave1 = 10;
+
+    assert(partition(vtr11,vtr14,vtr15,chave1) == true);
+    assert(vtr12 == vtr14);
+    assert(vtr13 == vtr15);
+
     /*assert(celsius2Fahrenheit(0) == 32);
     assert(celsius2Fahrenheit(3) == 37.4);
     assert(celsius2Fahrenheit(8) == 46.4);
