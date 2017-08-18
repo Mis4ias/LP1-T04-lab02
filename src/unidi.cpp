@@ -52,9 +52,17 @@ void merge(vector<int> &vtr1,vector<int> &vtr2, vector<int> &vtr3){
 		}
 
 	}
+	while(i < vtr1.size() || j < vtr2.size()){
+		if(i == vtr1.size() && j < vtr2.size()){
+			vtr3.push_back(vtr2[j]);
+			j++;
+		}
+		if(j==vtr2.size() && i < vtr1.size()){
+			vtr3.push_back(vtr1[i]);
+			i++;
+		}
 
-	for()
-
+	}
 }
 	
 
